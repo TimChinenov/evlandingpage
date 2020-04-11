@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class TypeAnimation extends Component {
   render() {
     const emails = ["a restaurant!",
@@ -12,7 +13,7 @@ class TypeAnimation extends Component {
     return (
       <div className="type-animation-segment">
         <div className="type-animation-title">
-          Hi Evervice!
+          <h1>Hi Evervice!</h1>
         </div>
         <div className="type-animation-emailbox">
           <div className="type-animation-text">

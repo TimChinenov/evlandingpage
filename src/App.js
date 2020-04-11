@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import MainBody from './body/body.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

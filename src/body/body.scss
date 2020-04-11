@@ -1,0 +1,58 @@
+@import '../styles/colors.scss';
+
+.container-fluid {
+
+}
+
+.row.header-segment {
+    padding: 0%;
+    background-color: $light-blue;
+
+    .type-segment {
+      display: inline;
+      width: 50%;
+      .type-animation-title {
+        font-size: 130%;
+      }
+      .type-animation-emailbox {
+        background-color: $email-box-color;
+        border-top: 2px solid $email-border;
+        border-left: 2px solid $email-border;
+      }
+    }
+
+    .page-segment {
+      .web-border-top
+      {
+        img {
+          width: 75%;
+        }
+      }
+
+      .web-border-left
+      {
+        float:left;
+        img {
+          width: 100%;
+          height:50px;
+        }
+      }
+
+      .splash-screen
+      {
+        float:left;
+        img {
+          width: 5px;
+        }
+      }
+
+      .web-border-right
+      {
+        float:right;
+        img {
+          width: 100%;
+          height:50px;
+        }
+      }
+    }
+  }
