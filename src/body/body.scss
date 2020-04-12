@@ -1,10 +1,12 @@
 @import '../styles/colors.scss';
 
 .container-fluid {
-
+  height: 100%;
+  background-color: $light-blue;
 }
 
 .row.header-segment {
+    height: 1000px;
     padding: 0%;
     background-color: $light-blue;
 
@@ -22,36 +24,26 @@
     }
 
     .page-segment {
+
       .web-border-top
       {
+        text-align: right;
         img {
           width: 75%;
         }
       }
-
-      .web-border-left
-      {
-        float:left;
-        img {
-          width: 100%;
-          height:50px;
-        }
-      }
-
       .splash-screen
       {
-        float:left;
+        text-align: right;
         img {
-          width: 5px;
+          width:75%;
         }
       }
-
-      .web-border-right
+      .web-border-bottom
       {
-        float:right;
+        text-align: right;
         img {
-          width: 100%;
-          height:50px;
+          width: 75%;
         }
       }
     }
