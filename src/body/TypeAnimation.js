@@ -1,40 +1,46 @@
 import React, { Component } from 'react';
+import PageAnimation from './PageAnimation.js';
 
 
 class TypeAnimation extends Component {
   constructor(props) {
     super(props);
-    this.emails = ["a restaurant!",
-                    "a brand!",
-                    "a blog!"];
-
+    this.emails = ["A RESTAURANT!",
+                    "A BRAND!",
+                    "A BLOG!"];
+    this.state = {
+      animationState: 0,
+      imageIterator: -1,
+    };
   }
 
-  getTypewriterWord = () => {
-    var itr = this.props.imageIterator;
-    return [this.emails[itr]];
+  updateTypeState = (stateNum) => {
+    this.state.animationState = stateNum;
   }
 
-  updateState = (stateNum) => {
-    var state = stateNum;
+  incrementImageItr = () => {
+    this.setState((state) => {
+      return {animationState: 1,
+              imageIterator: state.imageIterator===this.emails.length-1 ? -1 : state.imageIterator + 1}
+    })
   }
 
   render() {
     var ReactRotatingText = require('react-rotating-text');
     return (
-      <div className="type-animation-segment">
-        <div className="type-animation-title">
-          <h1>Hi Evervice!</h1>
+      <div className="row header-segment">
+        <div className="col-6 type-segment">
+          <h2> { "LET'S BUILD" } </h2>
+          <h2>
+          <ReactRotatingText items={ this.emails } pause="3000"
+                               onTypingStart={() => this.setState(() => ({animationState: 0}))}
+                               onTypingEnd={() => this.incrementImageItr()}
+                               onDeletingStart={() => this.setState(() => ({animationState: 2}))}
+                               onDeletingEnd={() => this.setState(() => ({animationState: 3}))}/>
+          </h2>
         </div>
-        <div className="type-animation-emailbox">
-          <div className="type-animation-text">
-            <span className="base-string" style={{marginRight:"2px"}}>I want to build</span>
-            <ReactRotatingText items={ this.getTypewriterWord() } pause='3000'
-                                    onTypingStart={() => this.updateState(0)}
-                                    onTypingEnd={() => this.updateState(1)}
-                                    onDeletingStart={() => this.updateState(2)}
-                                    onDeletingEnd={() => this.updateState(3)}/>
-          </div>
+        <div className="col-6 page-segment">
+          <PageAnimation {...this.state}/>
         </div>
       </div>
     )

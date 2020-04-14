@@ -16,31 +16,11 @@ class PageAnimation extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      imageIterator: 0
-    };
-    this.changeImage = this.changeImage.bind(this);
-  }
-
-  componentDidMount() {
-    this.interval = setInterval(() => this.changeImage(), 6000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  changeImage() {
-    const numberOfImages = 3;
-    this.setState(state => ({
-      imageIterator: state.imageIterator === numberOfImages - 1 ? 0 : state.imageIterator + 1
-    }));
   }
 
   cycleThroughImages = () => {
     const images = [LandingPage1, LandingPage2, LandingPage3];
-    var counter = 0;
-    return <div><img src={images[this.state.imageIterator]}></img></div>;
+    return <div><img src={images[this.props.imageIterator]}></img></div>;
   }
 
   render() {
@@ -53,8 +33,7 @@ class PageAnimation extends Component {
         </div>
 
         <div className="splash-screen">
-
-            <h1>{ this.cycleThroughImages() }</h1>
+          <h1> { this.cycleThroughImages() } </h1>
 
         </div>
 
