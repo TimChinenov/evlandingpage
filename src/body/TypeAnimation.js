@@ -34,7 +34,7 @@ class TypeAnimation extends Component {
           <div className="type-segment">
             <h2> { "LET'S BUILD" } </h2>
             <h2>
-            <ReactRotatingText items={ this.emails } pause="5000" deletingInterval="95"
+            <ReactRotatingText items={ this.emails } pause="5000" deletingInterval="100"
                                  onTypingStart={() => this.setState(() => ({animationState: 0}))}
                                  onTypingEnd={() => this.incrementImageItr()}
                                  onDeletingStart={() => this.setState(() => ({animationState: 2}))}
