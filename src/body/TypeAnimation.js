@@ -15,10 +15,6 @@ class TypeAnimation extends Component {
     };
   }
 
-  updateTypeState = (stateNum) => {
-    this.state.animationState = stateNum;
-  }
-
   incrementImageItr = () => {
     this.setState((state) => {
       return {animationState: 1,
