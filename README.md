@@ -1,4 +1,4 @@
-#evlandingpage
+# evlandingpage
 
 This is a react application used to demo a simple animation that was used as part of a bigger project. An example of the animation can be seen below:
 
