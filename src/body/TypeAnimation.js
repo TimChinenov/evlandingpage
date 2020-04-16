@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PageAnimation from './PageAnimation.js';
+import './body.scss';
 
 
 class TypeAnimation extends Component {
@@ -21,7 +22,7 @@ class TypeAnimation extends Component {
   incrementImageItr = () => {
     this.setState((state) => {
       return {animationState: 1,
-              imageIterator: state.imageIterator===this.emails.length-1 ? -1 : state.imageIterator + 1}
+              imageIterator: state.imageIterator===this.emails.length-1 ? 0 : state.imageIterator + 1}
     })
   }
 
@@ -29,15 +30,17 @@ class TypeAnimation extends Component {
     var ReactRotatingText = require('react-rotating-text');
     return (
       <div className="row header-segment">
-        <div className="col-6 type-segment">
-          <h2> { "LET'S BUILD" } </h2>
-          <h2>
-          <ReactRotatingText items={ this.emails } pause="3000"
-                               onTypingStart={() => this.setState(() => ({animationState: 0}))}
-                               onTypingEnd={() => this.incrementImageItr()}
-                               onDeletingStart={() => this.setState(() => ({animationState: 2}))}
-                               onDeletingEnd={() => this.setState(() => ({animationState: 3}))}/>
-          </h2>
+        <div className="col-6">
+          <div className="type-segment">
+            <h2> { "LET'S BUILD" } </h2>
+            <h2>
+            <ReactRotatingText items={ this.emails } pause="5000" deletingInterval="95"
+                                 onTypingStart={() => this.setState(() => ({animationState: 0}))}
+                                 onTypingEnd={() => this.incrementImageItr()}
+                                 onDeletingStart={() => this.setState(() => ({animationState: 2}))}
+                                 onDeletingEnd={() => this.setState(() => ({animationState: 3}))}/>
+            </h2>
+          </div>
         </div>
         <div className="col-6 page-segment">
           <PageAnimation {...this.state}/>

@@ -1,0 +1,136 @@
+.divDisappear {
+  position: relative;
+  line-height: 4em;
+  overflow: hidden;
+  img {
+    opacity: 0;
+    -moz-animation: makeNotOpaque 1s ease-in normal;
+    -webkit-animation: makeNotOpaque 1s ease-in normal;
+    -ms-animation: makeNotOpaque 1s ease-in normal;
+    -o-animation: makeNotOpaque 1s ease-in normal;
+    animation: makeNotOpaque 1s ease-in normal;
+  }
+}
+.imageDisappear {
+  position: absolute;
+  top: 0; bottom: 0;  right: 0;
+  width: 100%;
+  background: white;
+  -moz-animation: hideShow 1s ease-in normal;
+  -webkit-animation: hideShow 1s ease-in normal;
+  -ms-animation: hideShow 1s ease-in normal;
+  -o-animation: hideShow 1s ease-in normal;
+  animation: hideShow 1s ease-in normal;
+}
+
+
+.divAppear{
+  position: relative;
+  line-height: 4em;
+  overflow: hidden;
+  img {
+    opacity: 1;
+    -moz-animation: makeOpaque 2s ease-in normal;
+    -webkit-animation: makeOpaque 2s ease-in normal;
+    -ms-animation: makeOpaque 2s ease-in normal;
+    -o-animation: makeOpaque 2s ease-in normal;
+    animation: makeOpaque 2s ease-in normal;
+  }
+}
+.imageAppear {
+  position:absolute;
+  top: 0; bottom: 0; right: 0;
+  width: 0%;
+  background: white;
+  -moz-animation: showHide 2s ease-in normal;
+  -webkit-animation: showHide 2s ease-in normal;
+  -ms-animation: showHide 2s ease-in normal;
+  -o-animation: showHide 2s ease-in normal;
+  animation: showHide 2s ease-in normal;
+}
+
+
+/** Animations **/
+@-webkit-keyframes showHide {
+  0%{width: 100%;}
+  100%{width: 0%;}
+}
+@-moz-keyframes showHide {
+  0%{width: 100%;}
+  100%{width: 0%;}
+}
+@-ms-keyframes showHide {
+  0%{width: 100%;}
+  100%{width: 0%;}
+}
+@-o-keyframes showHide {
+  0%{width: 100%;}
+  100%{width: 0%;}
+}
+@keyframes showHide {
+  0%{width: 100%;}
+  100%{width: 0%;}
+}
+
+@-webkit-keyframes makeOpaque {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@-moz-keyframes makeOpaque {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@-ms-keyframes makeOpaque {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@-o-keyframes makeOpaque {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes makeOpaque {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@-webkit-keyframes hideShow {
+  0%{width: 0%;}
+  100%{width: 100%;}
+}
+@-moz-keyframes hideShow {
+  0%{width: 0%;}
+  100%{width: 100%;}
+}
+@-ms-keyframes hideShow {
+  0%{width: 0%;}
+  100%{width: 100%;}
+}
+@-o-keyframes hideShow {
+  0%{width: 0%;}
+  100%{width: 100%;}
+}
+@keyframes hideShow {
+  0%{width: 0%;}
+  100%{width: 100%;}
+}
+
+@-webkit-keyframes makeNotOpaque {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@-moz-keyframes makeNotOpaque {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@-ms-keyframes makeNotOpaque {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@-o-keyframes makeNotOpaque {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@keyframes makeNotOpaque {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}

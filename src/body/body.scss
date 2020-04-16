@@ -2,24 +2,19 @@
 
 .container-fluid {
   height: 100%;
-  background-color: $light-blue;
 }
 
 .row.header-segment {
+    margin-top: 100px;
     height: 1000px;
-    padding: 0%;
-    background-color: $light-blue;
 
     .type-segment {
+      padding-top: 5rem;
       display: inline;
       width: 50%;
-      .type-animation-title {
-        font-size: 130%;
-      }
-      .type-animation-emailbox {
-        background-color: $email-box-color;
-        border-top: 2px solid $email-border;
-        border-left: 2px solid $email-border;
+      text-align: center;
+      h2 {
+        font-weight: bold;
       }
     }
 
