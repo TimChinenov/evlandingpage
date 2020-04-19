@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import LandingPage1 from '../assets/LandingPage1.png';
-import LandingPage2 from '../assets/LandingPage2.png';
-import LandingPage3 from '../assets/LandingPage3.png';
+import LandingPage1 from '../assets/LandingPage1.jpeg';
+import LandingPage2 from '../assets/LandingPage2.jpeg';
+import LandingPage3 from '../assets/LandingPage3.jpeg';
 import './animations.scss';
 
 class ImageAppear extends Component {

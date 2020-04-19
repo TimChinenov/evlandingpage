@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ImageAppear from './ImageAppear.js';
-import ImageDisappear from './ImageDisappear.js';
 
 class PageAnimation extends Component {
 
