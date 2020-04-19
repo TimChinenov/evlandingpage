@@ -5,12 +5,10 @@ import ImageDisappear from './ImageDisappear.js';
 class PageAnimation extends Component {
 
   cycleThroughImages = () => {
-    if (this.props.animationState === 1)
+    if (this.props.animationState === 1 ||
+        this.props.animationState === 2)
     {
       return <ImageAppear {...this.props}/>;
-    }
-    else if (this.props.animationState === 2) {
-      return <ImageDisappear {...this.props}/>;
     }
   }
 
